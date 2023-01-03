@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #48CAE4;
+}
+
+/* navigation bar */
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: #A2D2FF;
+  position: fixed;
+  top: 0;
+}
+
+label.logo {
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 0px 25px;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0px 8px;
+  line-height: 50px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+.checkbtn {
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+  padding-right: 25px;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media screen and (max-width:616px) {
+  .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(71, 65, 65);
+    top: 50px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px 0px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover {
+    background: none;
+    color: aliceblue;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+/* half-circle */
+.half-circle {
+  background: #90E0EF;
+  border-radius: 50% 0;
+  width: 580px;
+  height: 580px;
+  margin-top: 5%;
+  transition: 1s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.half-circle:hover {
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
+}
+
+.half-circle img {
+  background: none;
+}
+
+/* nepal flag  */
+.half-circle img {
+  margin-top: -15%;
+  margin-left: 100%;
+  transition: 1s;
+}
+
+.half-circle img:hover {
+  transform: scale(1.1);
+  /* transform: rotatez(360deg); */
+}
+
+/* social */
+.social-studies h1 {
+  font-size: 60px;
+  padding-top: 15%;
+  padding-left: 15%;
+
+  position: relative;
+  color: #90E0EF;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.social-studies h1:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 87px;
+  left: 87px;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0vw black;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0%;
+  }
+
+  80% {
+    width: 100%;
+  }
+}
+
+.half-circle hr {
+  margin-top: -47%;
+}
+
+.about h1 {
+  color: white;
+  padding: 10px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.social {
+  padding: 5px;
+  margin-top: -5%;
+  transition: 0.5s;
+  text-shadow: 2px 2px 8px #29f14b;
+}
+
+.social:hover {
+  text-shadow: 2px 2px 8px #ec4dd7;
+}
+
+.about li {
+  padding: 2px;
+  font-size: 18px;
+  padding-left: 5%;
+  list-style: inside;
+  list-style-type: circle;
+}
+/* footer */
+footer {
+  margin-top: 1%;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: rgb(184, 179, 179);
+}
+footer img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 5px;
+  float: left;
+  margin-left: 5%;
+}
+footer h2{
+  float: left;
+  margin-top: 15px;
+  color: white;
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px #fd0000;
+}
+footer p {
+  float: left;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 22%;
+}
+footer .fa-brands{
+  float: left;
+  color: white;
+  margin-top: 5px;
+  font-size: 30px;
+  padding: 7px;
+  transition: 1s;
+  text-shadow: 2px 2px 4px #fd0000;
+}
+footer .fa-whatsapp{
+  margin-left: 25%;
+}
+footer .fa-brands:hover{
+  color:rgb(184, 179, 179) ;
+}

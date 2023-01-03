@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #48CAE4;
+}
+
+/* navigation bar */
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: #A2D2FF;
+    position: fixed;
+    top: 0;
+}
+
+label.logo {
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 0px 25px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 8px;
+    line-height: 50px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.checkbtn {
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+    padding-right: 25px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width:616px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(71, 65, 65);
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px 0px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover {
+        background: none;
+        color: aliceblue;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+/* social */
+.social {
+    font-size: 50px;
+    margin-top: 10%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #fd0000;
+}
+
+/* drop down */
+.dropbtn {
+    background-color: #67d46b;
+    color: white;
+    padding: 16px;
+    font-size: 25px;
+    border: none;
+    border-radius: 15px;
+    transition: 1s;
+    margin: 10px;
+}
+
+.dropdown {
+    margin-top: 5%;
+    margin-left: 5%;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #90E0EF;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-top: 1%;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: rgb(184, 179, 179);
+}
+
+footer img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    float: left;
+    margin-left: 5%;
+}
+
+footer h2 {
+    float: left;
+    margin-top: 15px;
+    color: white;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px #fd0000;
+}
+
+footer p {
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    margin-left: 22%;
+}
+
+footer .fa-brands {
+    float: left;
+    color: white;
+    margin-top: 5px;
+    font-size: 30px;
+    padding: 7px;
+    transition: 1s;
+    text-shadow: 2px 2px 4px #fd0000;
+}
+
+footer .fa-whatsapp {
+    margin-left: 25%;
+}
+
+footer .fa-brands:hover {
+    color: rgb(184, 179, 179);
+}
